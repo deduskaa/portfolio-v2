@@ -1,0 +1,36 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.work-article {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+}
+
+.work-article img {
+  margin: 2rem auto;
+}
+
+.work-article hr {
+  margin: 2rem 0;
+}
+
+.work-article h2 {
+  font-family: 'Montserrat';
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.work-article p {
+  font-family: 'Roboto';
+  font-size: 18px;
+}
+
+.work-article p {
+  max-width: 800px;
+}
+
+.work-article ul {
+  display: inline-block;
+}
