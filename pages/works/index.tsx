@@ -2,33 +2,56 @@ import { GetStaticProps } from 'next';
 import Link from 'next/link';
 import Head from 'next/head';
 import { getWorks } from '../../lib/works';
-import { Layout } from '../../components/layout';
-import ArrowRight from '../../public/icons/arrow_right.svg';
+import { Layout } from '../../components/Layout';
+import { AnimationProps, motion } from 'framer-motion';
 
 export default function Works({ works }) {
+  const list = {
+    visible: (i) => ({
+      opacity: [0, 0.75, 0],
+      transition: {
+        delay: i * 0.4,
+        duration: 0.8,
+      },
+    }),
+    hidden: { opacity: 0 },
+    hover: { opacity: 1 },
+  };
+
   return (
     <Layout>
       <Head>
         <title>Jenny Tran - Works</title>
       </Head>
-      <section className="py-12">
-        <ul className="mt-12">
-          {works.map(({ id, description, title, preview }) => (
-            <li className="my-40 relative py-12 group">
+      <section className="py-6 max-w-screen-xl m-auto">
+        <motion.ul variants={list} className="mt-12 grid lg:grid-cols-2">
+          {works.map(({ id, description, title, preview }, i) => (
+            <motion.li whileHover="hover" variants={list} className="my-32 relative py-12 group" key={id}>
               <Link href="/works/[id]" as={`/works/${id}`}>
                 <a>
-                  <h2 className="text-6xl text-center font-default">{title}</h2>
-                  <div className="opacity-0 group-hover:opacity-25 transition-opacity duration-300 absolute w-full flex flex-col items-center justify-center top-0">
+                  <h2 className="text-5xl text-center font-default relative z-10 pointer-events-none">{title}</h2>
+                  <motion.div
+                    custom={i}
+                    animate="visible"
+                    initial="hidden"
+                    variants={{ ...list, hover: { opacity: 0.25 } }}
+                    whileHover="hover"
+                    className="absolute w-full flex flex-col items-center justify-center top-0 "
+                  >
                     <img src={preview} alt={description} className="rounded-lg" />
-                  </div>
-                  <small className="font-default text-xl text-center block m-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  </motion.div>
+                  <motion.small
+                    className="font-default text-xl text-center block m-auto"
+                    initial="hidden"
+                    variants={list}
+                  >
                     {description}
-                  </small>
+                  </motion.small>
                 </a>
               </Link>
-            </li>
+            </motion.li>
           ))}
-        </ul>
+        </motion.ul>
       </section>
     </Layout>
   );

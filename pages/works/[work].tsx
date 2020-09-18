@@ -1,6 +1,6 @@
 import { GetStaticProps, GetStaticPaths } from 'next';
 import Head from 'next/head';
-import { Layout } from '../../components/layout';
+import { Layout } from '../../components/Layout';
 import { getAllWorkIds, getWork } from '../../lib/works';
 
 export default function Work({

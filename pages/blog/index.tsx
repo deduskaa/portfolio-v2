@@ -1,16 +1,13 @@
 import Link from 'next/link';
 import { GetStaticProps } from 'next';
-import { Layout } from '../../components/layout';
-import { Date } from '../../components/date';
+import { Layout } from '../../components/Layout';
+import { Date } from '../../components/Date';
 import { getSortedPostsData } from '../../lib/posts';
 
 export default function Blog({ posts }) {
   return (
     <Layout>
-      <p>
-        I don't actually have a blog, since I'm not a blogger but here are some intresting stuff
-        I've been part of.
-      </p>
+      <p>I don't actually have a blog, since I'm not a blogger but here are some intresting stuff I've been part of.</p>
       {posts.map(({ id, date, title }) => (
         <li className="" key={id}>
           <Link href="/posts/[id]" as={`/posts/${id}`}>

@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { TopNav } from './topNav';
+import { TopNav } from './TopNav';
 import { BottomNav } from './BottomNav';
 import { Footer } from './Footer';
 
@@ -25,10 +25,7 @@ export function Layout({ children, home }: { children: React.ReactNode; home?: b
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;800&display=swap"
           rel="stylesheet"
         ></link>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap"
-          rel="stylesheet"
-        ></link>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet"></link>
       </Head>
       <TopNav />
       <main className="">{children}</main>

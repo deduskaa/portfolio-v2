@@ -1,8 +1,8 @@
 import { GetStaticProps, GetStaticPaths } from 'next';
 import Head from 'next/head';
-import { Layout } from '../../components/layout';
+import { Layout } from '../../components/Layout';
 import { getAllPostIds, getPostData } from '../../lib/posts';
-import { Date } from '../../components/date';
+import { Date } from '../../components/Date';
 
 export default function Post({
   postData,
