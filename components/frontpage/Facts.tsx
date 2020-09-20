@@ -25,9 +25,9 @@ export const Facts = () => {
   };
 
   return (
-    <section className="bg-black-light py-8 mt-40 mb-24">
+    <section className="bg-black-light py-8 lg:mt-40 lg:mb-24">
       <div className="max-w-screen-xl m-auto flex flex-col items-center">
-        <h2 className="text-4xl font-default font-extrabold leading-tight mb-8">
+        <h2 className="text-4xl font-default font-extrabold leading-tight mb-8 text-center">
           Want to hear <span className="text-blue-600">fun facts</span>?
         </h2>
         <motion.button
@@ -45,7 +45,7 @@ export const Facts = () => {
                 animate={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: 10 }}
                 key={i}
-                className="text-xl flex-1 my-2 mr-4 py-2 px-4 rounded-full bg-blue-600"
+                className="text-xl flex-1 my-2 mr-4 py-2 px-8 rounded-full bg-blue-800"
               >
                 {fact}
               </motion.li>

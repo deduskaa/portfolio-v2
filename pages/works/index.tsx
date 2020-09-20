@@ -33,10 +33,12 @@ export default function Works({ works }) {
       >
         <motion.ul variants={list} className="mt-12 grid lg:grid-cols-2">
           {works.map(({ id, description, title, preview }, i) => (
-            <motion.li whileHover="hover" variants={list} className="my-32 relative py-12 group" key={id}>
+            <motion.li whileHover="hover" variants={list} className="lg:my-32 relative py-12 group" key={id}>
               <Link href="/works/[id]" as={`/works/${id}`}>
                 <a>
-                  <h2 className="text-6xl text-center font-default relative z-10 pointer-events-none">{title}</h2>
+                  <h2 className="text-xl lg:text-6xl text-center font-default relative z-10 pointer-events-none">
+                    {title}
+                  </h2>
                   <motion.div
                     custom={i}
                     animate="visible"

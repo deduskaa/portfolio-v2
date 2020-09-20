@@ -30,7 +30,7 @@ export function Layout({ children, home }: { children: React.ReactNode; home?: b
       </Head>
       <AnimateSharedLayout type="crossfade">
         <TopNav />
-        <main className="">{children}</main>
+        <main className="overflow-hidden">{children}</main>
         <footer>
           <Footer />
         </footer>

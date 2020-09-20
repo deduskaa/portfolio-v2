@@ -86,7 +86,7 @@ export const Story = () => {
         </motion.p>
         <motion.div
           style={{ scale: scaleBall, top: '-20%' }}
-          className="rounded-full w-64 h-64 bg-gradient-to-r from-pink-600 to-purple-600 absolute right-0 z-0 top-0"
+          className="rounded-full w-64 h-64 bg-gradient-to-r from-pink-600 to-purple-600 absolute right-0 z-0 top-0 hidden lg:block"
         ></motion.div>
       </div>
       <motion.h3 variants={text} className="text-3xl lg:text-4xl font-default font-extrabold leading-tight mb-4">
