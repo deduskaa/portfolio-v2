@@ -3,15 +3,7 @@ import Head from 'next/head';
 import { Layout } from '../../components/Layout';
 import { getAllWorkIds, getWork } from '../../lib/works';
 
-export default function Work({
-  work,
-}: {
-  work: {
-    title: string;
-    description: string;
-    contentHtml: string;
-  };
-}) {
+export default function Work({ work }: { work: { title: string; description: string; contentHtml: string } }) {
   return (
     <Layout>
       <Head>
@@ -32,7 +24,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }: { params: { work: string } }) => {
-  console.log('getStaticProps:GetStaticProps -> params', params);
   const work = await getWork(params.work);
   return { props: { work } };
 };

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { TopNav } from './TopNav';
 import { BottomNav } from './BottomNav';
 import { Footer } from './Footer';
+import { AnimateSharedLayout } from 'framer-motion';
 
 const name = 'Jenny Tran';
 export const siteTitle = 'JENNY TRAN - FULL STACK DESIGNER';
@@ -27,12 +28,14 @@ export function Layout({ children, home }: { children: React.ReactNode; home?: b
         ></link>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet"></link>
       </Head>
-      <TopNav />
-      <main className="">{children}</main>
-      <footer>
-        <Footer />
-      </footer>
-      <BottomNav />
+      <AnimateSharedLayout type="crossfade">
+        <TopNav />
+        <main className="">{children}</main>
+        <footer>
+          <Footer />
+        </footer>
+        <BottomNav />
+      </AnimateSharedLayout>
     </div>
   );
 }

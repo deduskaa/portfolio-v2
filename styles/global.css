@@ -3,17 +3,18 @@
 @import 'tailwindcss/utilities';
 
 .work-article {
-  max-width: 1200px;
-  margin: auto;
-  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .work-article img {
-  margin: 2rem auto;
+  margin: 1rem auto;
 }
 
 .work-article hr {
   margin: 2rem 0;
+  width: 100%;
 }
 
 .work-article h2 {
@@ -25,6 +26,7 @@
 .work-article p {
   font-family: 'Roboto';
   font-size: 18px;
+  margin: 1rem 0;
 }
 
 .work-article p {
@@ -33,4 +35,13 @@
 
 .work-article ul {
   display: inline-block;
+}
+
+.work-article a {
+  color: #661499;
+  font-weight: 600;
+}
+
+.work-article a:hover {
+  text-decoration: underline;
 }

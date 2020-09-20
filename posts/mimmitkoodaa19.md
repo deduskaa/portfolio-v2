@@ -1,6 +1,7 @@
 ---
 title: Mimmit koodaa 2019 - That one time I taught something
 date: '2019-11-09'
+thumbnail: /images/mimmitkoodaa_1.jpg
 ---
 
 This was me getting way out of my comfort zone and surviving it.

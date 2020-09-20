@@ -22,6 +22,17 @@ module.exports = {
           800: '#440e66',
           900: '#220733',
         },
+        blue: {
+          100: '#e5efff',
+          200: '#b3d0ff',
+          300: '#80b1ff',
+          400: '#4d92ff',
+          500: '#1a73ff',
+          600: '#0059e6',
+          700: '#0045b3',
+          800: '#003180',
+          900: '#001e4d',
+        },
       },
       maxWidth: {
         50: '50%',
@@ -52,8 +63,9 @@ module.exports = {
   variants: {
     animation: ['responsive', 'hover', 'focus'],
     flexDirection: ['even'],
-    backgroundColor: ['even', 'hover'],
+    backgroundColor: ['even', 'hover', 'disabled'],
     opacity: ['hover', 'group-hover'],
+    cursor: ['disabled'],
   },
   plugins: [],
   purge: [

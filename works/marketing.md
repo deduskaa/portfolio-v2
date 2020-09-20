@@ -14,7 +14,7 @@ I gratuated as a media engineer and as you might wonder what media engineer does
 
 ![The process of making a roll up](/images/marketing_rollup.jpg)
 
-## I've produced printed marketing material for b2b sales. In this case marketing materials included different catalogs, flyers, pop-ups, product tags and many other things.
+I've produced printed marketing material for b2b sales. In this case marketing materials included different catalogs, flyers, pop-ups, product tags and many other things.
 
 ---
 
@@ -30,4 +30,4 @@ As my thesis work I planned a suitable social media marketing strategy for a boo
 
 [![My animation of a lego dude on a bed](http://img.youtube.com/vi/FE5bLtnfkAA/0.jpg)](https://www.youtube.com/watch?v=FE5bLtnfkAA 'Lego dude')
 
-Ok I wouldn't say I have experience in this but I did [this](https://www.youtube.com/watch?v=FE5bLtnfkAA).
+Ok I wouldn't say I have experience in this but I made [this](https://www.youtube.com/watch?v=FE5bLtnfkAA).

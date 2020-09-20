@@ -12,19 +12,13 @@ preview: /images/yrityshaku.jpg
 
 Kauppalehti is a multichannel news outlet focusing on economic phenomena and the money market in the digital era. Yrityshaku has been part of Kauppalehti since the beginning.
 
-## My Role
-
-- UI/UX Design
-- Visual Design
-- Development
-
 ---
 
 ## Development
 
 ![Image](/images/companysearch_companypage.jpg)
 
-Yrityshaku was my first big React project and I consider it my firstborn, codewise. Being part of designing and developing it is probably one of the highlights of my career. Technologywise I got my first touch on real world React development, Redux and Typescript.
+Yrityshaku was my first big React project and I consider it my firstborn. Being part of designing and developing it is probably one of the highlights of my career. Technologywise I got my first touch on real world React development, Redux and Typescript.
 
 ---
 

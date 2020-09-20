@@ -1,6 +1,7 @@
 ---
 title: GrandOne 2020 - Winner of Best Usage of Data
 date: '2020-11-15'
+thumbnail: /images/grandone_watching.jpg
 ---
 
 I got the honor of being part of the team developing an app that allows consumers to understand their shopping behavior and its impact.
