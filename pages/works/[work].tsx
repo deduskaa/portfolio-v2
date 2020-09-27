@@ -9,7 +9,7 @@ export default function Work({ work }: { work: { title: string; description: str
       <Head>
         <title>{work.title}</title>
       </Head>
-      <article className="max-w-screen-xl m-auto py-12">
+      <article className="max-w-screen-xl m-auto py-12 px-3">
         <h1 className="text-4xl font-default">{work.title}</h1>
         <div className="text-2xl font-default text-gray-400 pb-8">{work.description}</div>
         <div className="work-article" dangerouslySetInnerHTML={{ __html: work.contentHtml }} />

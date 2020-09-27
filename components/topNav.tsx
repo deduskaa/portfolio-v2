@@ -13,6 +13,10 @@ export const TopNav = () => {
     { title: 'Contact', path: '/contact' },
   ];
 
+  const variants = { initial: {}, hover: { color: '#fff' } };
+
+  const scaleLine = { hidden: { scale: 0 }, hover: { scale: 1.2, transition: { duration: 0.3 } } };
+
   return (
     <AnimateSharedLayout>
       <nav className="border-b border-gray-600 border-opacity-25 p-4 sticky top-0 bg-black z-20">
@@ -26,19 +30,22 @@ export const TopNav = () => {
 
           <ul className="lg:flex space-x-4 text-gray-500 hidden">
             {routes.map((route) => (
-              <li key={route.title} className="hover:text-white">
+              <motion.li
+                key={route.title}
+                variants={variants}
+                whileHover="hover"
+                className={pathname === route.path && 'text-white'}
+              >
                 <Link href={route.path}>
                   <a>{route.title}</a>
                 </Link>
-                {pathname === route.path && (
-                  <motion.div
-                    initial={false}
-                    layoutId="outline"
-                    animate={{ background: 'pink' }}
-                    className="mt-1 rounded-full h-1 bg-white w-full"
-                  ></motion.div>
-                )}
-              </li>
+                <motion.div
+                  variants={scaleLine}
+                  whileHover="hover"
+                  initial={pathname === route.path ? 'hover' : 'hidden'}
+                  className="mt-1 rounded-lg h-2px bg-white w-full"
+                ></motion.div>
+              </motion.li>
             ))}
           </ul>
         </div>

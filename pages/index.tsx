@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion, useSpring, useTransform, useViewportScroll } from 'framer-motion';
 import { Layout, siteTitle } from '../components/Layout';
-import { Facts } from '../components/frontpage/facts';
+import { Facts } from '../components/frontpage/Facts';
 import { Story } from '../components/frontpage/Story';
 import { Quotes } from '../components/frontpage/Quotes';
 

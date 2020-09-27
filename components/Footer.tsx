@@ -1,6 +1,6 @@
 export const Footer = () => {
   return (
-    <div className="text-center py-24">
+    <div className="text-center py-12 lg:py-24">
       <p className="mb-8">I made dis.</p>
       <ul className="flex justify-center">
         <li className="mx-3">

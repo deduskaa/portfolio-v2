@@ -16,12 +16,10 @@ export const Story = () => {
   const { scrollYProgress } = useViewportScroll();
   const scaleValues = useTransform(scrollYProgress, [0, 0.5], [0.6, 1.6]);
   const scaleBall = useSpring(scaleValues, { stiffness: 400, damping: 90 });
-  const secondScaleValues = useTransform(scrollYProgress, [0.5, 1], [0.6, 1.6]);
-  const secondScaleBall = useSpring(secondScaleValues, { stiffness: 400, damping: 90 });
 
   const container = {
     hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { staggerChildren: 0.4, delayChildren: 0.5 } },
+    visible: { opacity: 1, transition: { staggerChildren: 0.4, delayChildren: 0.4 } },
   };
 
   const text = {
@@ -38,7 +36,7 @@ export const Story = () => {
 
   useEffect(() => {
     scrollYProgress.onChange((e) => {
-      !scrolledTo && e > 0.2 && setScrolledTo(true);
+      !scrolledTo && e > 0.15 && setScrolledTo(true);
     });
   }, []);
 
@@ -98,7 +96,7 @@ export const Story = () => {
       </motion.p>
       <motion.p
         variants={text}
-        className="text-xl lg:text-2xl font-default max-w-lg leading-normal lg:text-right lg:ml-auto"
+        className="text-xl lg:text-2xl font-default max-w-lg leading-normal my-4 lg:text-right lg:ml-auto"
       >
         Currently working as a{' '}
         <a

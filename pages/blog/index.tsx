@@ -1,13 +1,16 @@
-import Link from 'next/link';
 import { GetStaticProps } from 'next';
+import Head from 'next/head';
+import { AnimatePresence, motion } from 'framer-motion';
 import { Layout } from '../../components/Layout';
 import { Date } from '../../components/Date';
 import { getSortedPostsData } from '../../lib/posts';
-import { AnimatePresence, motion } from 'framer-motion';
 
 export default function Blog({ posts }) {
   return (
     <Layout>
+      <Head>
+        <title>Jenny Tran - Works</title>
+      </Head>
       <AnimatePresence>
         <motion.section
           className="max-w-screen-xl m-auto p-3"
@@ -17,19 +20,16 @@ export default function Blog({ posts }) {
           transition={{ duration: 1, delay: 0.15 }}
           style={{ pointerEvents: 'auto' }}
         >
-          <h1 className="text-4xl">Blog</h1>
-          <p>
-            I don't actually have a blog, since I'm not a blogger but here are some interesting stuff I've been part of.
-          </p>
+          <h1 className="text-4xl lg:text-5xl font-default font-semibold">Blog</h1>
+          <p>I don't actually have a blog but here are some interesting stuff I've been part of.</p>
           <ul className="my-8 grid lg:grid-cols-2 items-center">
             {posts.map(({ id, date, title, thumbnail }) => (
               <li className="my-16 flex flex-col items-center" key={id}>
                 <p className="text-center">
-                  <img className="max-w-xs mb-4 m-auto" src={thumbnail} alt={title} />
+                  <img className="max-w-sm mb-4 m-auto" src={thumbnail} alt={title} />
                   <motion.p layoutId={id}>{title}</motion.p>
                 </p>
-                <br />
-                <small className="">
+                <small className="my-2">
                   <Date dateString={date} />
                 </small>
               </li>

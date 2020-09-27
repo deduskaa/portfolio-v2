@@ -1,9 +1,9 @@
 import { GetStaticProps, GetStaticPaths } from 'next';
 import Head from 'next/head';
+import { AnimatePresence, motion } from 'framer-motion';
 import { Layout } from '../../components/Layout';
 import { getAllPostIds, getPostData } from '../../lib/posts';
 import { Date } from '../../components/Date';
-import { AnimatePresence, motion } from 'framer-motion';
 
 export default function Post({
   postData,

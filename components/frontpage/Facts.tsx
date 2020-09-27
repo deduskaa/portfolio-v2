@@ -8,6 +8,9 @@ export const Facts = () => {
     'I once won second place in a dance game competition 🥈',
     'My corona time hobby was sour dough baking 🍞',
     'I have completed the Hoenn Pokédex 🧢',
+    'I prefer fantasy over sci-fi 🧙‍♂️',
+    'Jenny is actually my third name',
+    'Don Rosa is my favorite Donald Duck artist',
   ];
   const allFactsShowed = renderedFacts.length === facts.length;
 
@@ -19,15 +22,15 @@ export const Facts = () => {
       showFact();
       return;
     }
-    const newFacts = [...renderedFacts, facts[randomNumber]];
 
+    const newFacts = [...renderedFacts, facts[randomNumber]];
     setRenderedFacts(newFacts);
   };
 
   return (
     <section className="bg-black-light py-8 lg:mt-40 lg:mb-24">
       <div className="max-w-screen-xl m-auto flex flex-col items-center">
-        <h2 className="text-4xl font-default font-extrabold leading-tight mb-8 text-center">
+        <h2 className="text-3xl lg:text-4xl font-default font-extrabold leading-tight mb-8 text-center">
           Want to hear <span className="text-blue-600">fun facts</span>?
         </h2>
         <motion.button
@@ -45,7 +48,7 @@ export const Facts = () => {
                 animate={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: 10 }}
                 key={i}
-                className="text-xl flex-1 my-2 mr-4 py-2 px-8 rounded-full bg-blue-800"
+                className="text-xl flex-1 m-2 py-2 px-8 rounded-full bg-blue-800"
               >
                 {fact}
               </motion.li>

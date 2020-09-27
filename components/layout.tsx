@@ -1,9 +1,8 @@
 import Head from 'next/head';
-import Link from 'next/link';
+import { AnimateSharedLayout } from 'framer-motion';
 import { TopNav } from './TopNav';
 import { BottomNav } from './BottomNav';
 import { Footer } from './Footer';
-import { AnimateSharedLayout } from 'framer-motion';
 
 const name = 'Jenny Tran';
 export const siteTitle = 'JENNY TRAN - FULL STACK DESIGNER';

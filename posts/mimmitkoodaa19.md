@@ -1,5 +1,5 @@
 ---
-title: Mimmit koodaa 2019 - That one time I taught something
+title: Mimmit koodaa 2019 - Teaching HTML and CSS for beginners
 date: '2019-11-09'
 thumbnail: /images/mimmitkoodaa_1.jpg
 ---

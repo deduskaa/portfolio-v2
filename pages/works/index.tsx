@@ -1,9 +1,9 @@
 import { GetStaticProps } from 'next';
 import Link from 'next/link';
 import Head from 'next/head';
+import { motion } from 'framer-motion';
 import { getWorks } from '../../lib/works';
 import { Layout } from '../../components/Layout';
-import { AnimationProps, motion } from 'framer-motion';
 
 export default function Works({ works }) {
   const list = {
@@ -45,9 +45,9 @@ export default function Works({ works }) {
                     initial="hidden"
                     variants={{ ...list, hover: { opacity: 0.25 } }}
                     whileHover="hover"
-                    className="absolute w-full flex flex-col items-center justify-center top-0 "
+                    className="absolute w-full flex flex-col items-center justify-center top-0"
                   >
-                    <img src={preview} alt={description} className="rounded-lg" />
+                    <img src={preview} alt={description} className="rounded-lg max-w-50 lg:max-w-full" />
                   </motion.div>
                   <motion.small
                     className="font-default text-xl text-center block m-auto"

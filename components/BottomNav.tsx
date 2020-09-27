@@ -6,6 +6,11 @@ export const BottomNav = () => {
     <nav className="lg:hidden bg-black sticky bottom-0 z-20">
       <ul className="flex space-x-4 text-gray-500 p-4 justify-evenly border-t border-gray-600 border-opacity-25">
         <li className="hover:text-white">
+          <Link href="/">
+            <a>Home</a>
+          </Link>
+        </li>
+        <li className="hover:text-white">
           <Link href="/works">
             <a>Works</a>
           </Link>

@@ -34,9 +34,13 @@ module.exports = {
           900: '#001e4d',
         },
       },
+      height: {
+        '2px': '2px',
+      },
       maxWidth: {
         50: '50%',
         45: '45%',
+        15: '15%',
       },
       keyframes: {
         fadeIn: {
