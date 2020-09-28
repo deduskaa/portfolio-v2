@@ -62,7 +62,7 @@ export const Quotes = () => {
                 initial="hidden"
                 variants={quote}
                 key={i}
-                className="text-2xl font-default max-w-lg leading-normal lg:mt-8 my-16 pt-20 pb-10 px-8 mt-5 rounded-lg hidden lg:block"
+                className="text-2xl font-default max-w-lg leading-normal lg:mt-8 my-16 pt-20 pb-10 px-8 mt-5 rounded-lg hidden lg:block"
               >
                 ‟ {text} ”
               </motion.blockquote>
