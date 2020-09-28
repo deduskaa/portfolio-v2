@@ -2,6 +2,7 @@
 title: Kohderyhmähaku
 description: Out with the old and in with the new
 preview: /images/krh.jpg
+order: 1
 ---
 
 ![Image](/images/krh_desktop_mobile.jpg)

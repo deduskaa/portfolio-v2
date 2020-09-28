@@ -2,6 +2,7 @@
 title: MoviX
 description: Doing stuff for fun
 preview: /images/movix.jpg
+order: 3
 ---
 
 ![Image of Movix movie page](/images/movix_moviepage.jpg)

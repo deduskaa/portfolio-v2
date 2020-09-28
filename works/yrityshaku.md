@@ -2,6 +2,7 @@
 title: Kauppalehti.fi - Yrityshaku
 description: Part of something bigger
 preview: /images/yrityshaku.jpg
+order: 2
 ---
 
 ![Image](/images/companysearch_frontpage.jpg)

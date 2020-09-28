@@ -8,6 +8,7 @@ interface MetaData {
   description: string;
   title: string;
   preview: string;
+  order: number;
 }
 
 const worksDirectory = path.join(process.cwd(), 'works');
@@ -23,12 +24,11 @@ export function getWorks() {
     return { id, ...(matterResult.data as MetaData) };
   });
 
-  return allWorksData;
+  return allWorksData.sort((a, b) => (a.order < b.order ? -1 : 1));
 }
 
 export function getAllWorkIds() {
   const fileNames = fs.readdirSync(worksDirectory);
-  console.log('getAllWorkIds -> fileNames', fileNames);
   return fileNames.map((fileName) => ({
     params: {
       work: fileName.replace(/\.md$/, ''),
