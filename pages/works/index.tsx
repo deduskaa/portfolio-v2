@@ -7,16 +7,25 @@ import { Layout } from '../../components/Layout';
 
 export default function Works({ works }) {
   const list = {
-    visible: (i) => ({
-      opacity: [0, 0.75, 0],
-      scale: 1.2,
+    visible: {
+      opacity: 1,
       transition: {
-        delay: i * 0.5,
-        duration: 0.8,
+        delayChildren: 1,
+        staggerChildren: 1,
       },
-    }),
-    hidden: { opacity: 0, scale: 1 },
+    },
+    hidden: { opacity: 0 },
     hover: { opacity: 1 },
+  };
+
+  const image = {
+    visible: {
+      opacity: [0, 0.75, 0],
+      scale: [1, 1.2, 1],
+      transition: { duration: 1 },
+    },
+    hidden: { opacity: 0, scale: 1 },
+    hover: { opacity: 0.25 },
   };
 
   return (
@@ -26,10 +35,7 @@ export default function Works({ works }) {
       </Head>
       <motion.section
         className="py-6 max-w-screen-xl m-auto"
-        initial={{ opacity: 0, scale: 1 }}
-        animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0, transition: { duration: 1 } }}
-        transition={{ duration: 0.5, delay: 0.15 }}
       >
         <motion.ul variants={list} className="mt-12 grid lg:grid-cols-2">
           {works.map(({ id, description, title, preview }, i) => (
@@ -40,10 +46,9 @@ export default function Works({ works }) {
                     {title}
                   </h2>
                   <motion.div
-                    custom={i}
                     animate="visible"
                     initial="hidden"
-                    variants={{ ...list, hover: { opacity: 0.25 } }}
+                    variants={image}
                     whileHover="hover"
                     className="absolute w-full flex flex-col items-center justify-center top-0"
                   >

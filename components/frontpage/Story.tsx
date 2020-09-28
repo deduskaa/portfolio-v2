@@ -19,12 +19,12 @@ export const Story = () => {
 
   const container = {
     hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { staggerChildren: 0.4, delayChildren: 0.4 } },
+    visible: { opacity: 1, transition: { staggerChildren: 0.4, delayChildren: 0.3 } },
   };
 
   const text = {
     hidden: { opacity: 0, y: 10 },
-    visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.3 } },
+    visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.2 } },
   };
 
   const spanVariant = {
@@ -36,7 +36,7 @@ export const Story = () => {
 
   useEffect(() => {
     scrollYProgress.onChange((e) => {
-      !scrolledTo && e > 0.15 && setScrolledTo(true);
+      !scrolledTo && e > 0.1 && setScrolledTo(true);
     });
   }, []);
 
