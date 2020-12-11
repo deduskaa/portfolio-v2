@@ -38,7 +38,7 @@ export default function Home() {
             variants={image}
             className="w-64 m-auto lg:max-w-45 md:max-w-md md:w-auto lg:ml-auto my-8 lg:my-12 md:order-2"
           >
-            <img alt="Cartoon version of me" src="/images/cartoon_me.png" />
+            <img alt="Cartoon version of me" src="/images/cartoon_me.png" width="570" height="570" />
           </motion.div>
           <div className="mx-3 lg:mx-none">
             <motion.h1 variants={text} className="text-4xl lg:text-7xl font-default font-extrabold leading-tight">

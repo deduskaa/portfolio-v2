@@ -48,7 +48,7 @@ export const Quotes = () => {
       <AnimateSharedLayout>
         <div className="grid lg:grid-cols-3 mt-12 mb-20">
           {testimonies.map(({ text, person }, i) => (
-            <motion.div layout className="flex flex-col items-center relative">
+            <motion.div layout className="flex flex-col items-center relative" key={i}>
               {i === visibleIndex && (
                 <motion.div
                   layoutId="line"

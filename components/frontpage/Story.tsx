@@ -47,9 +47,9 @@ export const Story = () => {
       variants={container}
       className="max-w-screen-xl mx-3 lg:m-auto"
     >
-      <motion.h3 className="text-3xl lg:text-4xl font-default font-extrabold leading-tight mb-4 lg:text-left">
+      <motion.h2 className="text-3xl lg:text-4xl font-default font-extrabold leading-tight mb-4 lg:text-left">
         I like <motion.span className="text-pink-600">JavaScript</motion.span> and everything web,
-      </motion.h3>
+      </motion.h2>
       <motion.p variants={text} className="text-xl lg:text-2xl font-default max-w-lg leading-normal mb-8 pb-8 lg:mb-24">
         I have solid knowledge of JavaScript and its ecosystem, including experience from jQuery to Node.js. I aim for{' '}
         <motion.span variants={spanVariant} className="">
@@ -70,12 +70,12 @@ export const Story = () => {
         in the end product.
       </motion.p>
       <div className="relative">
-        <motion.h3
+        <motion.h2
           variants={text}
           className="text-3xl lg:text-4xl font-default font-extrabold leading-tight mb-4 lg:text-right relative z-10"
         >
           but I love <span className="text-pink-600">CSS</span> with its quirks and all.
-        </motion.h3>
+        </motion.h2>
         <motion.p
           variants={text}
           className="text-xl lg:text-2xl font-default max-w-lg leading-normal lg:text-right lg:ml-auto mb-8 pb-8 lg:mb-24 relative z-10"
@@ -87,9 +87,9 @@ export const Story = () => {
           className="rounded-full w-64 h-64 bg-gradient-to-r from-pink-600 to-purple-600 absolute right-0 z-0 top-0 hidden lg:block"
         ></motion.div>
       </div>
-      <motion.h3 variants={text} className="text-3xl lg:text-4xl font-default font-extrabold leading-tight mb-4">
+      <motion.h2 variants={text} className="text-3xl lg:text-4xl font-default font-extrabold leading-tight mb-4">
         All in all, <span className="text-purple-400">web development</span> is my jam.
-      </motion.h3>
+      </motion.h2>
       <motion.p variants={text} className="text-xl lg:text-2xl font-default max-w-lg leading-normal">
         APIs, version control, testing libraries, CI/CD pipelines, cloud services... I've not seen them all but I've
         worked with a lot of them.

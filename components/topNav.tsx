@@ -34,7 +34,7 @@ export const TopNav = () => {
                 key={route.title}
                 variants={variants}
                 whileHover="hover"
-                className={pathname === route.path && 'text-white'}
+                className={pathname === route.path ? 'text-white' : ''}
               >
                 <Link href={route.path}>
                   <a>{route.title}</a>
