@@ -10,7 +10,14 @@ export function Layout({ children, home }: { children: React.ReactNode; home?: b
   return (
     <div className="bg-black text-white">
       <Head>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143253930-1"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+          function gtag() { dataLayer.push(arguments); }
+          gtag('js', new Date());
+          gtag('config', 'UA-143253930-1');`,
+          }}
+        ></script>
         <link rel="icon" href="/favicon.ico" />
         <meta name="title" content={siteTitle} />
         <meta
